@@ -1,5 +1,6 @@
 import React from 'react'
 import Header from '../../components/Header'
+import Presentation from '../../components/Presentation'
 
 import {
     Container
@@ -9,6 +10,10 @@ const Home:React.FC = () => {
     return (
         <Container>
             <Header />    
+
+            <section>
+                <Presentation />
+            </section>
         </Container>
     )
 }

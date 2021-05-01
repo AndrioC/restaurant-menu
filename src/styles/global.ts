@@ -9,6 +9,8 @@ export const GlobalStyle = createGlobalStyle`
         --gray-300: #4b5862;
 
         --green-100: #1fb14c;
+
+        --brown-100: #9e7474;
     }
 
     * {
