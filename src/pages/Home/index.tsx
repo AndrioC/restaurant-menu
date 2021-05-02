@@ -1,4 +1,5 @@
 import React from 'react'
+import Foods from '../../components/Foods'
 import Header from '../../components/Header'
 import Menu from '../../components/Menu'
 import Presentation from '../../components/Presentation'
@@ -19,6 +20,11 @@ const Home:React.FC = () => {
             <section>
                 <Menu />
             </section>
+
+            <section>
+                <Foods />
+            </section>
+
         </Container>
     )
 }
