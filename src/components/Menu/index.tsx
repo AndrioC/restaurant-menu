@@ -1,6 +1,6 @@
 import React, { useMemo, useState } from 'react'
 
-import menu from '../../assets//data/menu'
+import menu from '../../assets/data/menu'
 
 import {
     Container,
@@ -15,6 +15,7 @@ interface MenuProps{
 const Menu:React.FC = () => {
 
     const [menuList, setMenuList] = useState<MenuProps[]>([])
+    const [categorySelected, setCategorySelected] = useState(1)
 
     useMemo(() => {
         setMenuList(menu)
@@ -23,7 +24,13 @@ const Menu:React.FC = () => {
     function renderMenuList(){
         return (
             menuList.map((item) => (
-                <span key={item.id}>{item.title}</span>
+                <span
+                    key={item.id}
+                    onClick={() => setCategorySelected(item.id)}
+                    className={categorySelected === item.id ? 'active-menu' : ''}
+                >
+                    {item.title}            
+                </span>
             ))
         )
     }

@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const Container = styled.header`
+export const Container = styled.div`
     min-height: 100vh;
     padding: 5rem calc((100vw - 1300px) / 2);
     background: #fff;

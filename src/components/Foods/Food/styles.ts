@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const Container = styled.header`
+export const Container = styled.div`
     display: flex;
     flex-direction: column;
     margin-right: 30px;
@@ -16,9 +16,11 @@ export const ImageContent = styled.div`
 
     &:hover {
         background-color:rgba(0,0,0,0.6);
-        > button {
-            visibility: visible;
-        }        
+        a {
+            > button {
+                visibility: visible;
+            } 
+        }       
     }
 
     > img {
@@ -33,32 +35,35 @@ export const ImageContent = styled.div`
         }
     }
 
-    > button {
+    a {
         position: absolute;
-        width: 120px;
-        height: 36px;
-        border-radius: 6px;
         bottom: 40px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: var(--green-100);
-        border: none;
-        color: white;
-        font-weight: bold;
-        transition: filter .3s;
-        visibility: hidden;
-
-        &:hover{
-            filter: brightness(.81);
-        }        
-
-        > svg {
-            width: 18px;
-            height: 18px;
+        text-decoration: none;
+        > button {
+            width: 120px;
+            height: 36px;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--green-100);
+            border: none;
             color: white;
-            margin-right: 6px;
-            margin-bottom: 4px;
+            font-weight: bold;
+            transition: filter .3s;
+            visibility: hidden;
+
+            &:hover{
+                filter: brightness(.81);
+            }        
+
+            > svg {
+                width: 18px;
+                height: 18px;
+                color: white;
+                margin-right: 6px;
+                margin-bottom: 4px;
+            }
         }
     }
 

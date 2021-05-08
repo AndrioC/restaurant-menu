@@ -28,12 +28,14 @@ const Foods:React.FC = () => {
     function renderFoods(){
         return (
             foods.map((item) => (
-                <Food 
+                <Food
+                    id={item.id}
                     title={item.title}
                     image={item.image}
                     price={item.price}
                     reviews_qtd={item.reviews_qtd}
                     time_preparation={item.time_preparation}
+                    key={item.id}
                 />
             ))
         )

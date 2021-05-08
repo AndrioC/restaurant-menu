@@ -1,5 +1,7 @@
 import React from 'react'
 
+import { Link } from 'react-router-dom'
+
 import {
     Container,
     ImageContent,
@@ -14,6 +16,7 @@ import { MdShoppingBasket } from 'react-icons/md'
 import { AiFillStar, AiOutlineClockCircle } from 'react-icons/ai'
 
 interface FoodProps{
+    id: number;
     title: string;
     image: string;
     price: number;
@@ -21,15 +24,19 @@ interface FoodProps{
     time_preparation: string;
 }
 
-const Food:React.FC<FoodProps> = ({ title, image, price, reviews_qtd, time_preparation }) => {
+const Food:React.FC<FoodProps> = ({ id, title, image, price, reviews_qtd, time_preparation }) => {
     return (
         <Container>
             <ImageContent>
                 <img src={image} alt="food"/>
-                <button>
-                    <MdShoppingBasket />
-                    Saiba mais
-                </button>
+                <Link
+                     to={`/food-detail/${id}`}
+                >
+                    <button>
+                        <MdShoppingBasket />
+                        Saiba mais
+                    </button>
+                </Link>
             </ImageContent>
 
             <InfoContent>
