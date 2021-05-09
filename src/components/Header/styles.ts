@@ -16,5 +16,8 @@ export const Content = styled.div`
         font-weight: normal;
     }
 
+    @media(max-width: 900px){
+        padding: 30px 60px;
+    }
 
 `;

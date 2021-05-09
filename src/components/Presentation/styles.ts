@@ -9,7 +9,6 @@ export const Content = styled.div`
     height: 500px;
     width: 100%;
     justify-content: center;
-
     h1 {
         font-size: 42px;
         color: var(--green-100);
@@ -44,6 +43,27 @@ export const Content = styled.div`
             filter: brightness(.81);
         }
     }
+
+    @media(max-width: 900px){
+       height: 200px;
+       width: 100%;
+       align-items: center;
+       justify-content: center;
+       h1 {
+           font-size: 21px;
+       }
+
+       h3 {
+           font-size: 15px;
+       }
+
+       p {
+           font-size: 9px;
+           width: 100px;
+           line-height: 13px;
+       }
+    }
+
 `;
 
 export const Info = styled.div`
@@ -61,8 +81,19 @@ export const Info = styled.div`
         height: 160px;
         width: 6px;
     }
+
+    @media(max-width: 900px){
+        margin-right: 0;
+    }
 `;
 
 export const ImagesBackground = styled.div`
     display: flex;
+
+    @media(max-width: 900px){
+        img {
+            width: 150px;
+            height: 109px;
+        }
+    }
 `;

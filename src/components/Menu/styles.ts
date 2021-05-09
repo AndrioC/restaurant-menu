@@ -8,10 +8,16 @@ export const Container = styled.div`
     width: 100%;
     background: var(--white-200);
     margin-top: 30px;
+    padding-right: 60px;
+
+    @media(max-width: 900px){
+        overflow-x: scroll;
+    }
 `;
 
 export const Content = styled.div`
     display: flex;
+    padding-right: 90px;
 
     span {
         font-size: 15px;
@@ -39,5 +45,9 @@ export const Content = styled.div`
             bottom: 0;
             left: 0;
         }
+    }
+
+    @media(max-width: 900px){
+        padding-left: 680px;
     }
 `;

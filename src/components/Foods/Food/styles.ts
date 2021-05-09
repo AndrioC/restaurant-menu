@@ -3,8 +3,12 @@ import styled from 'styled-components'
 export const Container = styled.div`
     display: flex;
     flex-direction: column;
-    margin-right: 30px;
+    margin-left: 30px;
     margin-bottom: 30px;
+
+    @media(max-width: 900px){ 
+        width: 120px;
+    }
 `;
 
 export const ImageContent = styled.div`
@@ -67,6 +71,13 @@ export const ImageContent = styled.div`
         }
     }
 
+    @media(max-width: 900px){ 
+        img {
+            width: 120px;
+            height: 240px;
+        }  
+    }
+
 `;
 
 
@@ -90,6 +101,16 @@ export const FoodInfo = styled.div`
     span {
         color: var(--green-100);
         font-weight: bold;
+    }
+
+    @media(max-width: 900px){ 
+        h1 {
+            font-size: 13px;
+        }
+
+        span {
+            font-size: 12px;
+        }
     }
 `;
 
@@ -116,6 +137,18 @@ export const FoodReviews = styled.div`
         font-weight: 600;
         color: var(--gray-500);
     }
+
+    @media(max-width: 900px){
+
+        > svg {
+            width: 6px;
+            height: 6px;
+        }
+
+        > span {
+            font-size: 7.2px;
+        }
+    }
 `;
 
 
@@ -133,5 +166,17 @@ export const FoodTime = styled.div`
         margin-left: 6px;
         font-size: 13px;
         color: var(--gray-500);
+    }
+
+    @media(max-width: 900px){
+        > svg {
+            width: 7px;
+            height: 7px;
+        }
+
+        > span {
+            margin-left: 3px;
+            font-size: 9px;
+        }
     }
 `;
