@@ -37,4 +37,13 @@ export const GlobalStyle = createGlobalStyle`
     button {
         cursor: pointer;
     }
+
+    ::-webkit-scrollbar {
+    width: 9px;
+    height: 3px;
+  }
+
+    ::-webkit-scrollbar-thumb {
+        background: #1fb14c;
+    }
 `;
